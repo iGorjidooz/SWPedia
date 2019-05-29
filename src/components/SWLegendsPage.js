@@ -1,47 +1,54 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import throttle from 'lodash/throttle';
 import Header from './Header';
 import SWLegendsList from './SWLegendsList';
+import { startFetchingStarships } from '../actions/starshipsActions';
+import { startFetchingPeople } from '../actions/peopleActions';
 
 const SWLegendsPage = props => {
-
-   const scrollEventHandler = e => {
-      if(window.innerHeight + document.documentElement.scrollTop < document.documentElement.offsetHeight - 30) {
+   // Scroll Event Handler Function
+   // When the page scrolls to bottom it dispatches the actions to load next page of starships and people data, and unbind itself from event listener
+   // throttle function from Lodash library has been used to improve performance of the scroll event handler
+   const scrollEventHandler = throttle(e => {
+      if(window.innerHeight + document.documentElement.scrollTop < (document.documentElement.offsetHeight - 20)) {
          return;
       }
-      // if(!)
-      console.log(window.innerHeight + document.documentElement.scrollTop);
-      // const legendsList = document.getElementById('legendsList');
-      // console.log(legendsList);
-   }
+      if(!props.isFetching) {
+         window.removeEventListener('scroll', scrollEventHandler, { passive: true });
+         props.startFetchingStarships(props.nextStarshipsPageUrl);
+         props.startFetchingPeople(props.nextPeoplePageUrl);
+      }
+   }, 250);
 
+   // Similar to componentDidUpdate lifecycle method
+   // Looks for changes in props.isFetching and props.hasMoreStarships and binds or unbinds scrollEventHandler function to scroll event listener based on the condition
    useEffect(() => {
-      window.addEventListener('scroll', scrollEventHandler);
-      return () => window.removeEventListener('scroll', scrollEventHandler);
-   }, []);
-
-   useEffect(() => {
-      !props.hasMore && window.removeEventListener('scroll', scrollEventHandler);
-   }, [props.hasMore])
+      props.hasMoreStarships && !props.isFetching ? window.addEventListener('scroll', scrollEventHandler, { passive: true }) : 
+         window.removeEventListener('scroll', scrollEventHandler, { passive: true });
+   }, [props.isFetching, props.hasMoreStarships]);
 
    return (
       <div>
          <Header />
-         <h1>SWLegendsPage</h1>
-         {props.isFetching ? (
-               <p>Loading ...</p>
-            ) : (
-               <div id="legendsList">
-                  <SWLegendsList />
-               </div>
-            )}
+         <div id="legendsList">
+            <SWLegendsList />
+         </div>
       </div>
    );
 };
 
 const mapStateToProps = state => ({
-   isFetching: state.starships.isFetching || state.people.isFetching,
-   hasMore: !!state.starships.nextUrl
+   hasMoreStarships: !!state.starships.nextPageUrl,
+   isFetching:  state.people.isFetching || state.starships.isFetching,
+   nextStarshipsPageUrl: state.starships.nextPageUrl,
+   nextPeoplePageUrl: state.people.nextPageUrl
 });
 
-export default connect(mapStateToProps)(SWLegendsPage);
+const mapDispatchToProps = (dispatch) => ({
+   startFetchingStarships: (nextStarshipsPageUrl) => dispatch(startFetchingStarships(nextStarshipsPageUrl)),
+   startFetchingPeople: (nextPeoplePageUrl) => dispatch(startFetchingPeople(nextPeoplePageUrl))
+ });
+
+// Connecting the component to Redux store
+export default connect(mapStateToProps, mapDispatchToProps)(SWLegendsPage);

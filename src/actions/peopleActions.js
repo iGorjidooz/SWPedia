@@ -15,10 +15,10 @@ export const requestPeople = () => ({
 // Asynchronous action creator which does the actual fetching,
 // dispatches synchronous "REQUEST" action at the beginning of the async process,
 // and dispatches synchronous "ADD" action when the async fetch is completed
-export const startFetchingPeople = () => {
+export const startFetchingPeople = (nextPageUrl = 'https://swapi.co/api/people/') => {
    return dispatch => {
       dispatch(requestPeople());
-      return fetch('https://swapi.co/api/people/').then( response => response.json() ).then(res => {
+      return fetch(nextPageUrl).then( response => response.json() ).then(res => {
          const formattedData = res.results.map(character => ({
             ...character,
             id: character.url.match(/^.*\/(\d+)\/$/)[1]

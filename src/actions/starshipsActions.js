@@ -15,10 +15,10 @@ export const requestStarships = () => ({
 // Asynchronous action creator which does the actual fetching,
 // dispatches synchronous "REQUEST" action at the beginning of the async process,
 // and dispatches synchronous "ADD" action when the async fetch is completed
-export const startFetchingStarships = () => {
+export const startFetchingStarships = (nextPageUrl = 'https://swapi.co/api/starships/') => {
    return dispatch => {
       dispatch(requestStarships());
-      return fetch('https://swapi.co/api/starships/').then( response => response.json() ).then(res => {
+      return fetch(nextPageUrl).then( response => response.json() ).then(res => {
          const formattedData = res.results.map(starship => ({
             ...starship,
             id: starship.url.match(/^.*\/(\d+)\/$/)[1]
