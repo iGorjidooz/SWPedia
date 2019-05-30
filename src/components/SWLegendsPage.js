@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import { connect } from 'react-redux';
-import throttle from 'lodash/throttle';
+import debounce from 'lodash/debounce';
 import Header from './Header';
 import SWLegendsList from './SWLegendsList';
 import { startFetchingStarships } from '../actions/starshipsActions';
@@ -10,34 +10,60 @@ export const SWLegendsPage = props => {
    // Scroll Event Handler Function
    // When the page scrolls to bottom it dispatches the actions to load next page of starships and people data, and unbind itself from event listener
    // throttle function from Lodash library has been used to improve performance of the scroll event handler
-   const scrollEventHandler = throttle(e => {
-      if(window.innerHeight + document.body.scrollTop < (document.body.offsetHeight - 20)) {
+   const scrollEventHandler = (e) => {
+      if(e.offsetHeight + e.scrollTop < (e.scrollHeight - 20)) {
          return;
       }
       if(!props.isFetching) {
-         window.removeEventListener('scroll', scrollEventHandler, { passive: true });
          props.startFetchingStarships(props.nextStarshipsPageUrl);
          props.startFetchingPeople(props.nextPeoplePageUrl);
       }
-   }, 250);
+   };
+
+   const debouncedHandler = debounce(e => scrollEventHandler(e), 250, { maxWait: 500 });
 
    // Similar to componentDidUpdate lifecycle method
    // Looks for changes in props.isFetching and props.hasMoreStarships and binds or unbinds scrollEventHandler function to scroll event listener based on the condition
-   useEffect(() => {
-      props.hasMoreStarships && !props.isFetching ? window.addEventListener('scroll', scrollEventHandler, { passive: true }) : 
-         window.removeEventListener('scroll', scrollEventHandler, { passive: true });
-      return () => {
-         window.removeEventListener('scroll', scrollEventHandler, { passive: true });
-      }
+   useLayoutEffect(() => {
+   //   props.hasMoreStarships && !props.isFetching
+   //     ? window.addEventListener("scroll", scrollEventHandler, {
+   //         passive: true
+   //       })
+   //     : window.removeEventListener("scroll", scrollEventHandler, {
+   //         passive: true
+   //       });
+   //   return () => {
+   //     window.removeEventListener("scroll", scrollEventHandler, {
+   //       passive: true
+   //     });
+   //   };
    }, [props.isFetching, props.hasMoreStarships]);
 
+   const scrollHandler = (arg1, arg2) => {
+      console.log('arg1',arg1);
+      console.log('arg1.ct',arg1.currentTarget);
+   }
+
+   const divStyle = {
+      height: '50vw',
+      overflow: 'scroll'
+   }
+
    return (
-      <div>
-         <Header />
-         <div id="legendsList">
-            <SWLegendsList />
-         </div>
-      </div>
+     <div>
+       <Header />
+       <div
+         id="legendsList"
+         style={divStyle}
+         onScroll={
+           props.hasMoreStarships && !props.isFetching
+             ? ({ currentTarget }) => debouncedHandler(currentTarget)
+             : null
+         }
+       >
+         <SWLegendsList />
+       </div>
+     </div>
    );
 };
 

@@ -1,9 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
+import {render, fireEvent, cleanup, waitForElement} from 'react-testing-library';
 import throttle from 'lodash/throttle';
 import starshipsFixtures from '../fixtures/starshipsFixtures';
 import peopleFixtures from '../fixtures/peopleFixtures';
-import { SWLegendsPage } from '../../components/SWLegendsPage';
+import { SWLegendsPage } from "../../components/SWLegendsPage";
 
 let wrapper, startFetchingStarships, startFetchingPeople, map;
 
@@ -34,14 +36,16 @@ beforeEach(() => {
 
    startFetchingPeople = jest.fn();
    startFetchingStarships = jest.fn();
-   wrapper = shallow(<SWLegendsPage
-      hasMoreStarships={false}
-      isFetching={false}
-      nextStarshipsPageUrl={''}
-      nextPeoplePageUrl={''}
-      startFetchingStarships={startFetchingPeople}
-      startFetchingPeople={startFetchingStarships}
-   />);
+   wrapper = shallow(
+       <SWLegendsPage
+         hasMoreStarships={false}
+         isFetching={false}
+         nextStarshipsPageUrl={""}
+         nextPeoplePageUrl={""}
+         startFetchingStarships={startFetchingPeople}
+         startFetchingPeople={startFetchingStarships}
+       />
+   );
 
    // wrapper.instance().scrollEventHandler = jest.fn();
 });
@@ -54,12 +58,25 @@ test('should render SWLegendsPage correctly', () => {
 });
 
 test('should call scrollEventHandler but not start to fetch new data', () => {
-   // global.document.body.scrollTop = 1000;
-   // wrapper.setProps({ hasMoreStarships: true });
-   // global.document.dispatchEvent(new Event('scroll'));
-   // console.log('map',map);
+   global.document.body.scrollTop = 1000;
+   wrapper.setProps({ hasMoreStarships: true });
+   global.document.dispatchEvent(new Event('scroll'));
+   console.log('map',map);
    // map.scroll();
-   // // jest.runOnlyPendingTimers();
-   // wrapper.update();
-   // expect(startFetchingStarships).toHaveBeenCalledTimes(1);
+   jest.runOnlyPendingTimers();
+   wrapper.update();
+   expect(startFetchingStarships).toHaveBeenCalledTimes(1);
+   // const { getByText, getByTestId, container, asFragment } = render(
+   //   <MemoryRouter>
+   //     <SWLegendsPage
+   //       hasMoreStarships={false}
+   //       isFetching={false}
+   //       nextStarshipsPageUrl={""}
+   //       nextPeoplePageUrl={""}
+   //       startFetchingStarships={startFetchingPeople}
+   //       startFetchingPeople={startFetchingStarships}
+   //     />
+   //   </MemoryRouter>
+   // );
+   // fireEvent.scroll(window);
 })
