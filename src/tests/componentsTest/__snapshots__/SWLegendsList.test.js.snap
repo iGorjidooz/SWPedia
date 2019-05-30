@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SWLegendsList correctly 1`] = `
+<div>
+  <SWStarshipListItem
+    key="1"
+    listIndex={1}
+    starship={
+      Object {
+        "MGLT": "60",
+        "cargo_capacity": "3000000",
+        "consumables": "1 year",
+        "cost_in_credits": "3500000",
+        "created": "2014-12-10T14:20:33.369000Z",
+        "crew": "165",
+        "edited": "2014-12-22T17:35:45.408368Z",
+        "films": Array [
+          "https://swapi.co/api/films/6/",
+          "https://swapi.co/api/films/3/",
+          "https://swapi.co/api/films/1/",
+        ],
+        "hyperdrive_rating": "2.0",
+        "id": "2",
+        "length": "150",
+        "manufacturer": "Corellian Engineering Corporation",
+        "max_atmosphering_speed": "950",
+        "model": "CR90 corvette",
+        "name": "CR90 corvette",
+        "passengers": "600",
+        "pilots": Array [],
+        "starship_class": "corvette",
+        "url": "https://swapi.co/api/starships/2/",
+      }
+    }
+  />
+  <SWStarshipListItem
+    key="2"
+    listIndex={2}
+    starship={
+      Object {
+        "MGLT": "60",
+        "cargo_capacity": "36000000",
+        "consumables": "2 years",
+        "cost_in_credits": "150000000",
+        "created": "2014-12-10T15:08:19.848000Z",
+        "crew": "47060",
+        "edited": "2014-12-22T17:35:44.410941Z",
+        "films": Array [
+          "https://swapi.co/api/films/2/",
+          "https://swapi.co/api/films/3/",
+          "https://swapi.co/api/films/1/",
+        ],
+        "hyperdrive_rating": "2.0",
+        "id": "3",
+        "length": "1,600",
+        "manufacturer": "Kuat Drive Yards",
+        "max_atmosphering_speed": "975",
+        "model": "Imperial I-class Star Destroyer",
+        "name": "Star Destroyer",
+        "passengers": "0",
+        "pilots": Array [],
+        "starship_class": "Star Destroyer",
+        "url": "https://swapi.co/api/starships/3/",
+      }
+    }
+  />
+  <SWStarshipListItem
+    key="3"
+    listIndex={3}
+    starship={
+      Object {
+        "MGLT": "70",
+        "cargo_capacity": "180000",
+        "consumables": "1 month",
+        "cost_in_credits": "240000",
+        "created": "2014-12-10T15:48:00.586000Z",
+        "crew": "5",
+        "edited": "2014-12-22T17:35:44.431407Z",
+        "films": Array [
+          "https://swapi.co/api/films/1/",
+        ],
+        "hyperdrive_rating": "1.0",
+        "id": "5",
+        "length": "38",
+        "manufacturer": "Sienar Fleet Systems, Cyngus Spaceworks",
+        "max_atmosphering_speed": "1000",
+        "model": "Sentinel-class landing craft",
+        "name": "Sentinel-class landing craft",
+        "passengers": "75",
+        "pilots": Array [],
+        "starship_class": "landing craft",
+        "url": "https://swapi.co/api/starships/5/",
+      }
+    }
+  />
+  <SWStarshipListItem
+    key="4"
+    listIndex={4}
+    starship={
+      Object {
+        "MGLT": "10",
+        "cargo_capacity": "1000000000000",
+        "consumables": "3 years",
+        "cost_in_credits": "1000000000000",
+        "created": "2014-12-10T16:36:50.509000Z",
+        "crew": "342953",
+        "edited": "2014-12-22T17:35:44.452589Z",
+        "films": Array [
+          "https://swapi.co/api/films/1/",
+        ],
+        "hyperdrive_rating": "4.0",
+        "id": "9",
+        "length": "120000",
+        "manufacturer": "Imperial Department of Military Research, Sienar Fleet Systems",
+        "max_atmosphering_speed": "n/a",
+        "model": "DS-1 Orbital Battle Station",
+        "name": "Death Star",
+        "passengers": "843342",
+        "pilots": Array [],
+        "starship_class": "Deep Space Mobile Battlestation",
+        "url": "https://swapi.co/api/starships/9/",
+      }
+    }
+  />
+  <SWStarshipListItem
+    key="5"
+    listIndex={5}
+    starship={
+      Object {
+        "MGLT": "75",
+        "cargo_capacity": "100000",
+        "consumables": "2 months",
+        "cost_in_credits": "100000",
+        "created": "2014-12-10T16:59:45.094000Z",
+        "crew": "4",
+        "edited": "2014-12-22T17:35:44.464156Z",
+        "films": Array [
+          "https://swapi.co/api/films/2/",
+          "https://swapi.co/api/films/7/",
+          "https://swapi.co/api/films/3/",
+          "https://swapi.co/api/films/1/",
+        ],
+        "hyperdrive_rating": "0.5",
+        "id": "10",
+        "length": "34.37",
+        "manufacturer": "Corellian Engineering Corporation",
+        "max_atmosphering_speed": "1050",
+        "model": "YT-1300 light freighter",
+        "name": "Millennium Falcon",
+        "passengers": "6",
+        "pilots": Array [
+          "https://swapi.co/api/people/13/",
+          "https://swapi.co/api/people/14/",
+          "https://swapi.co/api/people/25/",
+          "https://swapi.co/api/people/31/",
+        ],
+        "starship_class": "Light freighter",
+        "url": "https://swapi.co/api/starships/10/",
+      }
+    }
+  />
+  <SWStarshipListItem
+    key="6"
+    listIndex={6}
+    starship={
+      Object {
+        "MGLT": "80",
+        "cargo_capacity": "110",
+        "consumables": "1 week",
+        "cost_in_credits": "134999",
+        "created": "2014-12-12T11:00:39.817000Z",
+        "crew": "2",
+        "edited": "2014-12-22T17:35:44.479706Z",
+        "films": Array [
+          "https://swapi.co/api/films/2/",
+          "https://swapi.co/api/films/3/",
+          "https://swapi.co/api/films/1/",
+        ],
+        "hyperdrive_rating": "1.0",
+        "id": "11",
+        "length": "14",
+        "manufacturer": "Koensayr Manufacturing",
+        "max_atmosphering_speed": "1000km",
+        "model": "BTL Y-wing",
+        "name": "Y-wing",
+        "passengers": "0",
+        "pilots": Array [],
+        "starship_class": "assault starfighter",
+        "url": "https://swapi.co/api/starships/11/",
+      }
+    }
+  />
+  <SWStarshipListItem
+    key="7"
+    listIndex={7}
+    starship={
+      Object {
+        "MGLT": "100",
+        "cargo_capacity": "110",
+        "consumables": "1 week",
+        "cost_in_credits": "149999",
+        "created": "2014-12-12T11:19:05.340000Z",
+        "crew": "1",
+        "edited": "2014-12-22T17:35:44.491233Z",
+        "films": Array [
+          "https://swapi.co/api/films/2/",
+          "https://swapi.co/api/films/3/",
+          "https://swapi.co/api/films/1/",
+        ],
+        "hyperdrive_rating": "1.0",
+        "id": "12",
+        "length": "12.5",
+        "manufacturer": "Incom Corporation",
+        "max_atmosphering_speed": "1050",
+        "model": "T-65 X-wing",
+        "name": "X-wing",
+        "passengers": "0",
+        "pilots": Array [
+          "https://swapi.co/api/people/1/",
+          "https://swapi.co/api/people/9/",
+          "https://swapi.co/api/people/18/",
+          "https://swapi.co/api/people/19/",
+        ],
+        "starship_class": "Starfighter",
+        "url": "https://swapi.co/api/starships/12/",
+      }
+    }
+  />
+  <SWStarshipListItem
+    key="8"
+    listIndex={8}
+    starship={
+      Object {
+        "MGLT": "105",
+        "cargo_capacity": "150",
+        "consumables": "5 days",
+        "cost_in_credits": "unknown",
+        "created": "2014-12-12T11:21:32.991000Z",
+        "crew": "1",
+        "edited": "2014-12-22T17:35:44.549047Z",
+        "films": Array [
+          "https://swapi.co/api/films/1/",
+        ],
+        "hyperdrive_rating": "1.0",
+        "id": "13",
+        "length": "9.2",
+        "manufacturer": "Sienar Fleet Systems",
+        "max_atmosphering_speed": "1200",
+        "model": "Twin Ion Engine Advanced x1",
+        "name": "TIE Advanced x1",
+        "passengers": "0",
+        "pilots": Array [
+          "https://swapi.co/api/people/4/",
+        ],
+        "starship_class": "Starfighter",
+        "url": "https://swapi.co/api/starships/13/",
+      }
+    }
+  />
+  <SWCharacterListItem
+    character={
+      Object {
+        "birth_year": "19BBY",
+        "created": "2014-12-09T13:50:51.644000Z",
+        "edited": "2014-12-20T21:17:56.891000Z",
+        "eye_color": "blue",
+        "films": Array [
+          "https://swapi.co/api/films/2/",
+          "https://swapi.co/api/films/6/",
+          "https://swapi.co/api/films/3/",
+          "https://swapi.co/api/films/1/",
+          "https://swapi.co/api/films/7/",
+        ],
+        "gender": "male",
+        "hair_color": "blond",
+        "height": "172",
+        "homeworld": "https://swapi.co/api/planets/1/",
+        "id": "1",
+        "mass": "77",
+        "name": "Luke Skywalker",
+        "skin_color": "fair",
+        "species": Array [
+          "https://swapi.co/api/species/1/",
+        ],
+        "starships": Array [
+          "https://swapi.co/api/starships/12/",
+          "https://swapi.co/api/starships/22/",
+        ],
+        "url": "https://swapi.co/api/people/1/",
+        "vehicles": Array [
+          "https://swapi.co/api/vehicles/14/",
+          "https://swapi.co/api/vehicles/30/",
+        ],
+      }
+    }
+    key="9"
+    listIndex={9}
+  />
+</div>
+`;
+
+exports[`should render loading status when the app is fetching data from the API 1`] = `
+<div>
+  <div>
+    Loading...
+  </div>
+</div>
+`;

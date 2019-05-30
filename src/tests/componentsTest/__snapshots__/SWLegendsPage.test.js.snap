@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SWLegendsPage correctly 1`] = `
+<div>
+  <Header />
+  <div
+    id="legendsList"
+  >
+    <Connect(SWLegendsList) />
+  </div>
+</div>
+`;

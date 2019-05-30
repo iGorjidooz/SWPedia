@@ -6,12 +6,12 @@ import SWLegendsList from './SWLegendsList';
 import { startFetchingStarships } from '../actions/starshipsActions';
 import { startFetchingPeople } from '../actions/peopleActions';
 
-const SWLegendsPage = props => {
+export const SWLegendsPage = props => {
    // Scroll Event Handler Function
    // When the page scrolls to bottom it dispatches the actions to load next page of starships and people data, and unbind itself from event listener
    // throttle function from Lodash library has been used to improve performance of the scroll event handler
    const scrollEventHandler = throttle(e => {
-      if(window.innerHeight + document.documentElement.scrollTop < (document.documentElement.offsetHeight - 20)) {
+      if(window.innerHeight + document.body.scrollTop < (document.body.offsetHeight - 20)) {
          return;
       }
       if(!props.isFetching) {
@@ -26,6 +26,9 @@ const SWLegendsPage = props => {
    useEffect(() => {
       props.hasMoreStarships && !props.isFetching ? window.addEventListener('scroll', scrollEventHandler, { passive: true }) : 
          window.removeEventListener('scroll', scrollEventHandler, { passive: true });
+      return () => {
+         window.removeEventListener('scroll', scrollEventHandler, { passive: true });
+      }
    }, [props.isFetching, props.hasMoreStarships]);
 
    return (

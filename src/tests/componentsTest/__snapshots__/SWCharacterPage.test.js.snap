@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should redirect to homepage if the id passed to the page is not found in the store.people array 1`] = `
+<Redirect
+  to="/"
+/>
+`;
+
+exports[`should render SWCharacterPage correctly 1`] = `
+<div>
+  <Header />
+  <Link
+    to="/"
+  >
+    Back to List
+  </Link>
+  <h1>
+    C-3PO
+  </h1>
+  <div>
+    Profile: height: 
+    167
+     
+    <br />
+    mass: 
+    75
+     
+    <br />
+    Hair Color: 
+    n/a
+     
+    <br />
+    Skin color: 
+    gold
+     
+    <br />
+    Eye Color: 
+    yellow
+     
+    <br />
+    Birth Year: 
+    yellow
+     
+    <br />
+    Gender: 
+    n/a
+     
+    <br />
+  </div>
+</div>
+`;

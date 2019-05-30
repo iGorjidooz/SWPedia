@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SWCharacterListItem correctly 1`] = `
+<Link
+  to="/character/2"
+>
+  <h3>
+    2
+     
+    C-3PO
+  </h3>
+  <p>
+    Birth Year: 
+    112BBY
+  </p>
+  <p>
+    Gender: 
+    n/a
+  </p>
+</Link>
+`;

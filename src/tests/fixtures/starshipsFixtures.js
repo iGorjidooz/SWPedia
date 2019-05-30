@@ -68,4 +68,133 @@ export default [{
 	"edited": "2014-12-22T17:35:44.431407Z",
 	"url": "https://swapi.co/api/starships/5/",
 	"id": "5"
+},{
+	"name": "Death Star",
+	"model": "DS-1 Orbital Battle Station",
+	"manufacturer": "Imperial Department of Military Research, Sienar Fleet Systems",
+	"cost_in_credits": "1000000000000",
+	"length": "120000",
+	"max_atmosphering_speed": "n/a",
+	"crew": "342953",
+	"passengers": "843342",
+	"cargo_capacity": "1000000000000",
+	"consumables": "3 years",
+	"hyperdrive_rating": "4.0",
+	"MGLT": "10",
+	"starship_class": "Deep Space Mobile Battlestation",
+	"pilots": [],
+	"films": [
+		"https://swapi.co/api/films/1/"
+	],
+	"created": "2014-12-10T16:36:50.509000Z",
+	"edited": "2014-12-22T17:35:44.452589Z",
+	"url": "https://swapi.co/api/starships/9/",
+	"id": "9"
+}, {
+	"name": "Millennium Falcon",
+	"model": "YT-1300 light freighter",
+	"manufacturer": "Corellian Engineering Corporation",
+	"cost_in_credits": "100000",
+	"length": "34.37",
+	"max_atmosphering_speed": "1050",
+	"crew": "4",
+	"passengers": "6",
+	"cargo_capacity": "100000",
+	"consumables": "2 months",
+	"hyperdrive_rating": "0.5",
+	"MGLT": "75",
+	"starship_class": "Light freighter",
+	"pilots": [
+		"https://swapi.co/api/people/13/",
+		"https://swapi.co/api/people/14/",
+		"https://swapi.co/api/people/25/",
+		"https://swapi.co/api/people/31/"
+	],
+	"films": [
+		"https://swapi.co/api/films/2/",
+		"https://swapi.co/api/films/7/",
+		"https://swapi.co/api/films/3/",
+		"https://swapi.co/api/films/1/"
+	],
+	"created": "2014-12-10T16:59:45.094000Z",
+	"edited": "2014-12-22T17:35:44.464156Z",
+	"url": "https://swapi.co/api/starships/10/",
+	"id": "10"
+}, {
+	"name": "Y-wing",
+	"model": "BTL Y-wing",
+	"manufacturer": "Koensayr Manufacturing",
+	"cost_in_credits": "134999",
+	"length": "14",
+	"max_atmosphering_speed": "1000km",
+	"crew": "2",
+	"passengers": "0",
+	"cargo_capacity": "110",
+	"consumables": "1 week",
+	"hyperdrive_rating": "1.0",
+	"MGLT": "80",
+	"starship_class": "assault starfighter",
+	"pilots": [],
+	"films": [
+		"https://swapi.co/api/films/2/",
+		"https://swapi.co/api/films/3/",
+		"https://swapi.co/api/films/1/"
+	],
+	"created": "2014-12-12T11:00:39.817000Z",
+	"edited": "2014-12-22T17:35:44.479706Z",
+	"url": "https://swapi.co/api/starships/11/",
+	"id": "11"
+}, {
+	"name": "X-wing",
+	"model": "T-65 X-wing",
+	"manufacturer": "Incom Corporation",
+	"cost_in_credits": "149999",
+	"length": "12.5",
+	"max_atmosphering_speed": "1050",
+	"crew": "1",
+	"passengers": "0",
+	"cargo_capacity": "110",
+	"consumables": "1 week",
+	"hyperdrive_rating": "1.0",
+	"MGLT": "100",
+	"starship_class": "Starfighter",
+	"pilots": [
+		"https://swapi.co/api/people/1/",
+		"https://swapi.co/api/people/9/",
+		"https://swapi.co/api/people/18/",
+		"https://swapi.co/api/people/19/"
+	],
+	"films": [
+		"https://swapi.co/api/films/2/",
+		"https://swapi.co/api/films/3/",
+		"https://swapi.co/api/films/1/"
+	],
+	"created": "2014-12-12T11:19:05.340000Z",
+	"edited": "2014-12-22T17:35:44.491233Z",
+	"url": "https://swapi.co/api/starships/12/",
+	"id": "12"
+}, {
+	"name": "TIE Advanced x1",
+	"model": "Twin Ion Engine Advanced x1",
+	"manufacturer": "Sienar Fleet Systems",
+	"cost_in_credits": "unknown",
+	"length": "9.2",
+	"max_atmosphering_speed": "1200",
+	"crew": "1",
+	"passengers": "0",
+	"cargo_capacity": "150",
+	"consumables": "5 days",
+	"hyperdrive_rating": "1.0",
+	"MGLT": "105",
+	"starship_class": "Starfighter",
+	"pilots": [
+		"https://swapi.co/api/people/4/"
+	],
+	"films": [
+		"https://swapi.co/api/films/1/"
+	],
+	"created": "2014-12-12T11:21:32.991000Z",
+	"edited": "2014-12-22T17:35:44.549047Z",
+	"url": "https://swapi.co/api/starships/13/",
+	"id": "13"
 }]

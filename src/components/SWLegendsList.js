@@ -3,16 +3,21 @@ import { connect } from 'react-redux';
 import SWStarshipListItem from './SWStarshipListItem';
 import SWCharacterListItem from './SWCharacterListItem';
 
-const SWLegendsList = (props) => {
-   let count = 0
-
+export const SWLegendsList = (props) => {
    return (
       <div>
-         {props.starshipItems.map((item, index) => {
-            if (count > 0 && count % 8 === 0) {
-               return (<SWStarshipListItem key={item.id} starship={item} itemIndex={++count} />);
+         {props.starshipItems.map((item, arrayIndex) => {
+            const listIndex = arrayIndex + Math.floor(arrayIndex / 8) + 1;
+            if (props.peopleItems.length > 0 && arrayIndex > 0 && (arrayIndex + 1) % 8 === 0) {
+               const characterIndex = Math.floor(arrayIndex / 8);
+               return (
+                  <React.Fragment key={'listItemsWrapper' + arrayIndex}>
+                     <SWStarshipListItem key={listIndex} starship={item} listIndex={listIndex} />
+                     <SWCharacterListItem key={listIndex + 1} character={props.peopleItems[characterIndex]} listIndex={listIndex + 1} />
+                  </React.Fragment>
+               );
             } else {
-               return (<SWCharacterListItem key={item.id} character={item} itemIndex={++count} />);
+               return (<SWStarshipListItem key={listIndex} starship={item} listIndex={listIndex} />);
             }
          })}
          {props.isFetching && <div>Loading...</div>}

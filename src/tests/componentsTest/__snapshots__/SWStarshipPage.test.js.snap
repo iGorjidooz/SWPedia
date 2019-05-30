@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should redirect to homepage if the id passed to the page is not found in the store.people array 1`] = `
+<Redirect
+  to="/"
+/>
+`;
+
+exports[`should render SWCharacterPage correctly 1`] = `
+<div>
+  <Header />
+  <Link
+    to="/"
+  >
+    Back to List
+  </Link>
+  <h1>
+    Star Destroyer
+  </h1>
+  <div>
+    General Info: 
+    <br />
+    model: 
+    Imperial I-class Star Destroyer
+     
+    <br />
+    manufacturer: 
+    Kuat Drive Yards
+     
+    <br />
+    starship class: 
+    Star Destroyer
+     
+    <br />
+    Cost in credits: 
+    150000000
+     
+    <br />
+    length: 
+    1,600
+  </div>
+  <div>
+    Performance: 
+    <br />
+    Max Atomsphering Speed: 
+    975
+     
+    <br />
+    Hyperdrive Rating: 
+    2.0
+     
+    <br />
+    MGLT: 
+    60
+     
+    <br />
+  </div>
+  <div>
+    Capacity: 
+    <br />
+    crew: 
+    47060
+     
+    <br />
+    passengers: 
+    0
+     
+    <br />
+    cargo Capacity: 
+    36000000
+     
+    <br />
+    consumables: 
+    2 years
+  </div>
+</div>
+`;
