@@ -1,4 +1,4 @@
-#SWPedia
+# SWPedia
 
 Star Wars Starships and Characters database.
 
