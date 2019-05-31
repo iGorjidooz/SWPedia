@@ -7,71 +7,97 @@ exports[`should redirect to homepage if the id passed to the page is not found i
 `;
 
 exports[`should render SWCharacterPage correctly 1`] = `
-<div>
+<div
+  className="css-eswrbj"
+>
   <Header />
-  <Link
-    to="/"
+  <div
+    className="css-jfh2bv"
   >
-    Back to List
-  </Link>
-  <h1>
-    Star Destroyer
-  </h1>
-  <div>
-    General Info: 
-    <br />
-    model: 
-    Imperial I-class Star Destroyer
-     
-    <br />
-    manufacturer: 
-    Kuat Drive Yards
-     
-    <br />
-    starship class: 
-    Star Destroyer
-     
-    <br />
-    Cost in credits: 
-    150000000
-     
-    <br />
-    length: 
-    1,600
-  </div>
-  <div>
-    Performance: 
-    <br />
-    Max Atomsphering Speed: 
-    975
-     
-    <br />
-    Hyperdrive Rating: 
-    2.0
-     
-    <br />
-    MGLT: 
-    60
-     
-    <br />
-  </div>
-  <div>
-    Capacity: 
-    <br />
-    crew: 
-    47060
-     
-    <br />
-    passengers: 
-    0
-     
-    <br />
-    cargo Capacity: 
-    36000000
-     
-    <br />
-    consumables: 
-    2 years
+    <Link
+      className="css-rd4qh1"
+      to="/"
+    >
+      ← Back to List
+    </Link>
+    <h1>
+      Star Destroyer
+    </h1>
+    <div
+      className="css-1806dpm"
+    >
+      <div
+        className="css-1wetx9n"
+      >
+        <b>
+          General Info:
+        </b>
+         
+        <br />
+        Model: 
+        Imperial I-class Star Destroyer
+         
+        <br />
+        Manufacturer: 
+        Kuat Drive Yards
+         
+        <br />
+        Starship Class: 
+        Star Destroyer
+         
+        <br />
+        Cost in Credits: 
+        150000000
+         
+        <br />
+        Length: 
+        1,600
+      </div>
+      <div
+        className="css-1wetx9n"
+      >
+        <b>
+          Performance:
+        </b>
+         
+        <br />
+        Max Atomsphering Speed: 
+        975
+         
+        <br />
+        Hyperdrive Rating: 
+        2.0
+         
+        <br />
+        MGLT: 
+        60
+         
+        <br />
+      </div>
+      <div
+        className="css-1wetx9n"
+      >
+        <b>
+          Capacity:
+        </b>
+         
+        <br />
+        Crew: 
+        47060
+         
+        <br />
+        Passengers: 
+        0
+         
+        <br />
+        Cargo Capacity: 
+        36000000
+         
+        <br />
+        Consumables: 
+        2 years
+      </div>
+    </div>
   </div>
 </div>
 `;

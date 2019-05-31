@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { Global, css } from "@emotion/core";
+import emotionNormalize from 'emotion-normalize';
 import * as serviceWorker from './serviceWorker';
 import configureStore from './store/configureStore';
 import AppRouter from './router/AppRouter';
 import { startFetchingStarships } from './actions/starshipsActions';
 import { startFetchingPeople } from './actions/peopleActions';
+import { globalStyles } from './styles/CoreStyles';
 
 const store = configureStore();
 
@@ -14,6 +17,12 @@ store.dispatch(startFetchingPeople());
 
 const jsx = (
    <Provider store={store}>
+      <Global
+         styles={css`
+            ${emotionNormalize}
+            ${globalStyles}
+         `}
+      />
       <AppRouter />
    </Provider>
 );

@@ -1,21 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render SWCharacterListItem correctly 1`] = `
-<Link
-  to="/starship/3"
+<div
+  className="css-mb4h5n"
 >
-  <h3>
-    3
-     
-    Star Destroyer
-  </h3>
-  <p>
-    model: 
-    Imperial I-class Star Destroyer
-  </p>
-  <p>
-    manufacturer: 
-    Kuat Drive Yards
-  </p>
-</Link>
+  <Link
+    className="css-8uwxyq"
+    to="/starship/3"
+  >
+    <span
+      className="css-1wel5bj"
+    >
+      3
+    </span>
+    <div>
+      <h3
+        className="css-1uk1gs8"
+      >
+        Star Destroyer
+      </h3>
+      <p
+        className="css-1uk1gs8"
+      >
+        Model: 
+        Imperial I-class Star Destroyer
+      </p>
+      <p
+        className="css-1uk1gs8"
+      >
+        Manufacturer: 
+        Kuat Drive Yards
+      </p>
+    </div>
+  </Link>
+</div>
 `;

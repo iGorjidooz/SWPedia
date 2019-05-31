@@ -8,7 +8,8 @@
 const peopleDefaultState = {
    items: [],
    isFetching: false,
-   nextPageUrl: ''
+   nextPageUrl: '',
+   error: null
 };
 
 export default (state = peopleDefaultState, action) => {
@@ -24,6 +25,14 @@ export default (state = peopleDefaultState, action) => {
          };
       case 'REQUEST_PEOPLE':
          return { ...state, isFetching: true };
+      case 'HANDLE_FETCH_PEOPLE_ERROR':
+         return {
+            ...state, 
+            isFetching: false,
+            error: action.error
+         };
+      case 'SET_PEOPLE_NEXT_PAGE_URL':
+         return { ...state, nextPageUrl: action.nextPageUrl }
       default:
          return state;
    }

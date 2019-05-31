@@ -8,7 +8,8 @@
 const starshipsDefaultState = {
    items: [],
    isFetching: false,
-   nextPageUrl: ''
+   nextPageUrl: '',
+   error: null
 };
 
 export default (state = starshipsDefaultState, action) => {
@@ -23,7 +24,15 @@ export default (state = starshipsDefaultState, action) => {
             nextPageUrl: action.nextPageUrl
          };
       case 'REQUEST_STARSHIPS':
-         return { ...state, isFetching: true }
+         return { ...state, isFetching: true };
+      case 'HANDLE_FETCH_STARSHIP_ERROR':
+         return {
+            ...state,
+            isFetching: false,
+            error: action.error
+         };
+      case 'SET_STARSHIPS_NEXT_PAGE_URL':
+         return { ...state, nextPageUrl: action.nextPageUrl };
       default:
          return state;
    }

@@ -1,12 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render SWLegendsPage correctly 1`] = `
-<div>
+<div
+  className="css-eswrbj"
+>
   <Header />
   <div
-    id="legendsList"
+    className="css-yfnaq3"
   >
-    <Connect(SWLegendsList) />
+    <div
+      className="css-1rmlj2i"
+      id="legendsListWrapper"
+      onScroll={null}
+    >
+      <Connect(SWLegendsList) />
+    </div>
   </div>
 </div>
 `;

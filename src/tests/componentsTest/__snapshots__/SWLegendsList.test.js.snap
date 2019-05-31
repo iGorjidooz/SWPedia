@@ -301,8 +301,14 @@ exports[`should render SWLegendsList correctly 1`] = `
 
 exports[`should render loading status when the app is fetching data from the API 1`] = `
 <div>
-  <div>
-    Loading...
+  <div
+    className="css-rw2amo"
+  >
+    <img
+      alt="Loading..."
+      className="css-wuhw19"
+      src="/images/loader.gif"
+    />
   </div>
 </div>
 `;

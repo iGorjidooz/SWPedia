@@ -7,45 +7,63 @@ exports[`should redirect to homepage if the id passed to the page is not found i
 `;
 
 exports[`should render SWCharacterPage correctly 1`] = `
-<div>
+<div
+  className="css-eswrbj"
+>
   <Header />
-  <Link
-    to="/"
+  <div
+    className="css-jfh2bv"
   >
-    Back to List
-  </Link>
-  <h1>
-    C-3PO
-  </h1>
-  <div>
-    Profile: height: 
-    167
-     
-    <br />
-    mass: 
-    75
-     
-    <br />
-    Hair Color: 
-    n/a
-     
-    <br />
-    Skin color: 
-    gold
-     
-    <br />
-    Eye Color: 
-    yellow
-     
-    <br />
-    Birth Year: 
-    yellow
-     
-    <br />
-    Gender: 
-    n/a
-     
-    <br />
+    <Link
+      className="css-rd4qh1"
+      to="/"
+    >
+      ← Back to List
+    </Link>
+    <h1>
+      C-3PO
+    </h1>
+    <div
+      className="css-1806dpm"
+    >
+      <div
+        className="css-1wetx9n"
+      >
+        <b>
+          Profile:
+        </b>
+         
+        <br />
+        Height: 
+        167
+         
+        <br />
+        Mass: 
+        75
+         
+        <br />
+        Hair Color: 
+        n/a
+         
+        <br />
+        Skin color: 
+        gold
+         
+        <br />
+        Eye Color: 
+        yellow
+         
+        <br />
+        Birth Year: 
+        yellow
+         
+        <br />
+        Gender: 
+        n/a
+         
+        <br />
+      </div>
+    </div>
   </div>
 </div>
 `;

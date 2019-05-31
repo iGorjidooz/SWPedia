@@ -1,13 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Header correctly 1`] = `
-<header>
-  <Link
-    to="/"
+<header
+  className="css-1ouje1g"
+>
+  <div
+    className="css-ftuqp"
   >
-    <h1>
+    <Link
+      className="css-1nvdxq3"
+      to="/"
+    >
       SWPedia
-    </h1>
-  </Link>
+    </Link>
+  </div>
 </header>
 `;

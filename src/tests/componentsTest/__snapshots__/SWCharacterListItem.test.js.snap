@@ -1,21 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render SWCharacterListItem correctly 1`] = `
-<Link
-  to="/character/2"
+<div
+  className="css-mb4h5n"
 >
-  <h3>
-    2
-     
-    C-3PO
-  </h3>
-  <p>
-    Birth Year: 
-    112BBY
-  </p>
-  <p>
-    Gender: 
-    n/a
-  </p>
-</Link>
+  <Link
+    className="css-8uwxyq"
+    to="/character/2"
+  >
+    <span
+      className="css-1wel5bj"
+    >
+      2
+    </span>
+    <div>
+      <h3
+        className="css-1uk1gs8"
+      >
+        C-3PO
+      </h3>
+      <p
+        className="css-1uk1gs8"
+      >
+        Birth Year: 
+        112BBY
+      </p>
+      <p
+        className="css-1uk1gs8"
+      >
+        Gender: 
+        n/a
+      </p>
+    </div>
+  </Link>
+</div>
 `;

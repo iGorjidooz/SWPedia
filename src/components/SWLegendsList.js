@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { css } from 'emotion';
 import SWStarshipListItem from './SWStarshipListItem';
 import SWCharacterListItem from './SWCharacterListItem';
+import { listItemWrapper, loadingSpinnerWrapper, loadingSpinner } from '../styles/ContentStyles';
 
 export const SWLegendsList = (props) => {
    return (
@@ -20,7 +22,10 @@ export const SWLegendsList = (props) => {
                return (<SWStarshipListItem key={listIndex} starship={item} listIndex={listIndex} />);
             }
          })}
-         {props.isFetching && <div>Loading...</div>}
+         {props.isFetching && <div className={css`${listItemWrapper};${loadingSpinnerWrapper}`}>
+               <img className={loadingSpinner} src="/images/loader.gif" alt="Loading..." />
+            </div>
+         }
       </div>
    );
 };

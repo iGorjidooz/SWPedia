@@ -4,6 +4,10 @@ import fetchMock from 'fetch-mock';
 import * as starshipsActions from '../../actions/starshipsActions';
 import starshipsFixture from '../fixtures/starshipsFixtures';
 
+beforeEach(() => {
+   fetchMock.resetBehavior()
+});
+
 test('should set up add fetched starships action object', () => {
    const action = starshipsActions.addFetchedStarships(starshipsFixture);
    expect(action).toEqual({
@@ -22,7 +26,7 @@ test('should fetch the starships and add them to store', (done) => {
    const createMockStore = configureMockStore([thunk]);
    const store = createMockStore(defaultStarshipState);
 
-   fetchMock.once('https://swapi.co/api/starships/', { results: starshipsFixture });
+   fetchMock.mock('https://swapi.co/api/starships/', { results: starshipsFixture });
    
    store.dispatch(starshipsActions.startFetchingStarships()).then(() => {
       const actions = store.getActions();
