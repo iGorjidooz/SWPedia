@@ -34,11 +34,10 @@ export const startFetchingPeople = (nextPageUrl = 'https://swapi.co/api/people/'
    return dispatch => {
       dispatch(requestPeople());
       return fetch(nextPageUrl).then( response => {
-         console.log('RESPOOOOONSE', response.ok)
          if(response.ok) {
             return response.json();
          } else {
-            throw new Error('Something went wrong');
+            return Promise.reject('Something went wrong');
          }
       }).then(res => {
          const formattedData = res.results.map(character => ({
@@ -48,6 +47,7 @@ export const startFetchingPeople = (nextPageUrl = 'https://swapi.co/api/people/'
          dispatch(addFetchedPeople(formattedData, res.next));
       }).catch(error => {
          dispatch(handlePeopleFetchError(error));
+         throw error;
       });
    };
 };

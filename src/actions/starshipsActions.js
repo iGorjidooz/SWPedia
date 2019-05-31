@@ -36,7 +36,7 @@ export const startFetchingStarships = (nextPageUrl = 'https://swapi.co/api/stars
          if(response.ok) {
             return response.json();
          } else {
-            throw new Error('Something went wrong');
+            return Promise.reject("Something went wrong");
          }
       }).then(res => {
          const formattedData = res.results.map(starship => ({
@@ -45,7 +45,8 @@ export const startFetchingStarships = (nextPageUrl = 'https://swapi.co/api/stars
          }));
          dispatch(addFetchedStarships(formattedData, res.next));
       }).catch(error => {
-         dispatch(handleStarshipFetchError(error))
+         dispatch(handleStarshipFetchError(error));
+         throw error;
       });
    };
 };

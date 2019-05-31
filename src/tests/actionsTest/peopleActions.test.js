@@ -55,10 +55,9 @@ test('should fetch the people and handle fetch error', (done) => {
    const createMockStore = configureMockStore([thunk]);
    const store = createMockStore(defaultPeopleState);
 
-   fetchMock.mock('https://swapi.co/api/people/', () => { throw new Error('Oops! something went wrong.') });
+   fetchMock.mock('https://swapi.co/api/people/', () => 404);
    
    store.dispatch(peopleActions.startFetchingPeople()).then(() => {}).catch(error => {
-      disptatch(peopleActions.handlePeopleFetchError(error));
       const actions = store.getActions();
       expect(actions).toEqual([
          {

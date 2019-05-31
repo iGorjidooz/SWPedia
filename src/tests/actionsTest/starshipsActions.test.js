@@ -21,6 +21,12 @@ test('should set up request starships action object', () => {
    expect(action).toEqual({ type: 'REQUEST_STARSHIPS' });
 });
 
+test('should set up set next page url action object', () => {
+   const nextPageUrl = 'https://swapi.co/api/next/'
+   const action = starshipsActions.setStarshipsNextPageUrl();
+   expect(action).toEqual({ type: 'SET_STARSHIPS_NEXT_PAGE_URL' }, nextPageUrl);
+});
+
 test('should fetch the starships and add them to store', (done) => {
    const defaultStarshipState = { items: [], isFetching: false };
    const createMockStore = configureMockStore([thunk]);
@@ -38,4 +44,25 @@ test('should fetch the starships and add them to store', (done) => {
       }]);
       done();
    });
-})
+});
+
+test('should fetch the starships and handle fetch error', (done) => {
+   const defaultPeopleState = { items: [], isFetching: false };
+   const createMockStore = configureMockStore([thunk]);
+   const store = createMockStore(defaultPeopleState);
+
+   fetchMock.mock('https://swapi.co/api/starships/', () => 404);
+   
+   store.dispatch(starshipsActions.startFetchingStarships()).then(() => {}).catch(error => {
+      const actions = store.getActions();
+      expect(actions).toEqual([
+         {
+            type: 'REQUEST_STARSHIPS'
+         }, {
+            type: 'HANDLE_FETCH_STARSHIP_ERROR',
+            error
+         }
+      ]);
+      done();
+   });
+});
