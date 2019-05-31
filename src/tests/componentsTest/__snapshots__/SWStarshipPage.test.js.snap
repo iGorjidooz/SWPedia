@@ -8,7 +8,7 @@ exports[`should redirect to homepage if the id passed to the page is not found i
 
 exports[`should render SWCharacterPage correctly 1`] = `
 <div
-  className="css-eswrbj"
+  className="css-psi938"
 >
   <Header />
   <div
@@ -99,5 +99,6 @@ exports[`should render SWCharacterPage correctly 1`] = `
       </div>
     </div>
   </div>
+  <Footer />
 </div>
 `;

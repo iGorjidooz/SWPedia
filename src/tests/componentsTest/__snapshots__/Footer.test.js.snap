@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<footer
+  className="css-cmszbg"
+>
+  <div
+    className="css-pyh3k6"
+  >
+    Created By 
+    <a
+      className="css-fmslpk"
+      href="https://github.com/iGorjidooz"
+    >
+      Iman Gorjidooz
+    </a>
+  </div>
+</footer>
+`;

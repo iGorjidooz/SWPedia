@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import debounce from 'lodash/debounce';
 import { css } from 'emotion';
 import Header from './Header';
+import Footer from './Footer';
 import SWLegendsList from './SWLegendsList';
 import { startFetchingStarships } from '../actions/starshipsActions';
 import { startFetchingPeople } from '../actions/peopleActions';
@@ -25,23 +26,6 @@ export const SWLegendsPage = props => {
 
    const debouncedHandler = debounce(e => scrollEventHandler(e), 250, { maxWait: 500 });
 
-   // Similar to componentDidUpdate lifecycle method
-   // Looks for changes in props.isFetching and props.hasMoreStarships and binds or unbinds scrollEventHandler function to scroll event listener based on the condition
-   // useLayoutEffect(() => {
-   // //   props.hasMoreStarships && !props.isFetching
-   // //     ? window.addEventListener("scroll", scrollEventHandler, {
-   // //         passive: true
-   // //       })
-   // //     : window.removeEventListener("scroll", scrollEventHandler, {
-   // //         passive: true
-   // //       });
-   // //   return () => {
-   // //     window.removeEventListener("scroll", scrollEventHandler, {
-   // //       passive: true
-   // //     });
-   // //   };
-   // }, [props.isFetching, props.hasMoreStarships]);
-
    return (
      <div className={gStyles.pageWrapper}>
        <Header />
@@ -58,6 +42,7 @@ export const SWLegendsPage = props => {
             <SWLegendsList />
          </div>
        </div>
+       <Footer />
      </div>
    );
 };

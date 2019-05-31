@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { css } from 'emotion';
 import Header from './Header';
+import Footer from './Footer';
 import * as cStyles from '../styles/ContentStyles';
 import * as gStyles from '../styles/GeneralStyles';
 
@@ -28,6 +29,7 @@ export const SWCharacterPage = (props) => {
                </div>
             </div>
          </div>
+         <Footer />
       </div>
    )
 };

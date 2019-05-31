@@ -2,7 +2,7 @@
 
 exports[`should render SWLegendsPage correctly 1`] = `
 <div
-  className="css-eswrbj"
+  className="css-psi938"
 >
   <Header />
   <div
@@ -16,5 +16,6 @@ exports[`should render SWLegendsPage correctly 1`] = `
       <Connect(SWLegendsList) />
     </div>
   </div>
+  <Footer />
 </div>
 `;

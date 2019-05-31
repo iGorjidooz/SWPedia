@@ -10,5 +10,6 @@ export const pageWrapper = css({
    background: '#fff',
    fontSize: '62.5%',
    fontFamily: 'Helvetica, Arial, sans-serif',
+   height: '100vh',
    lineHeight: 1.6,
 });
